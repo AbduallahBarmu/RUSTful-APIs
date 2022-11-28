@@ -1,3 +1,5 @@
+import { addNewContact } from '../controller/crmController'
+
 const routes = (app) => {
     app.route('/contact')
         // routes for get and post method 
@@ -14,9 +16,7 @@ const routes = (app) => {
         })
 
 
-        .post((req, res) =>
-            res.send('POST request sucessful!')
-        )
+        .post(addNewContact);
 
     // routes for update and delete method 
     app.route('/contact/:contactId')
